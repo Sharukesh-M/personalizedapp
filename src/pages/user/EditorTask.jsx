@@ -93,10 +93,10 @@ export default function EditorTask() {
   const editorTheme = theme === 'dark' ? 'vs-dark' : 'light';
 
   return (
-    <div style={{ display: 'flex', gap: '2rem', height: 'calc(100vh - 120px)', alignItems: 'stretch' }}>
+    <div className="responsive-layout" style={{ display: 'flex', gap: '2rem', height: 'calc(100vh - 120px)', alignItems: 'stretch' }}>
       
       {/* Left Panel: Prompt & Info */}
-      <div className="card glass-panel" style={{ flex: '0 0 320px', display: 'flex', flexDirection: 'column', gap: '1rem', overflowY: 'auto' }}>
+      <div className="card glass-panel responsive-sidebar" style={{ flex: '0 0 320px', display: 'flex', flexDirection: 'column', gap: '1rem', overflowY: 'auto' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
           <MessageSquare size={20} color="var(--accent-primary)" />
           <h2 style={{ fontSize: '1.25rem', margin: 0 }}>Task Brief</h2>

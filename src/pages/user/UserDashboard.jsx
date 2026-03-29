@@ -44,10 +44,10 @@ export default function UserDashboard() {
   };
 
   return (
-    <div style={{ display: 'flex', gap: '2rem', height: '100%', alignItems: 'flex-start' }}>
+    <div className="responsive-layout" style={{ display: 'flex', gap: '2rem', height: '100%', alignItems: 'flex-start' }}>
       
       {/* Sidebar Profile / Stats / ToDo / Calendar */}
-      <div className="card glass-panel" style={{ width: '320px', position: 'sticky', top: '90px', display: 'flex', flexDirection: 'column', gap: '1.5rem', maxHeight: 'calc(100vh - 120px)', overflowY: 'auto' }}>
+      <div className="card glass-panel responsive-sidebar" style={{ width: '320px', position: 'sticky', top: '90px', display: 'flex', flexDirection: 'column', gap: '1.5rem', maxHeight: 'calc(100vh - 120px)', overflowY: 'auto' }}>
         <div style={{ textAlign: 'center' }}>
           <div style={{ width: '80px', height: '80px', borderRadius: '50%', background: 'var(--accent-primary)', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1rem', fontSize: '2rem', fontWeight: 'bold' }}>
             {currentUser.name.charAt(0)}

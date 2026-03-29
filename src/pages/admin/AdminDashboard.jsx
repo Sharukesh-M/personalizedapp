@@ -144,10 +144,10 @@ export default function AdminDashboard() {
     : completedTasks.filter(t => t.assignedTo === selectedReportUser);
 
   return (
-    <div style={{ display: 'flex', gap: '2rem', height: '100%', alignItems: 'flex-start' }}>
+    <div className="responsive-layout" style={{ display: 'flex', gap: '2rem', height: '100%', alignItems: 'flex-start' }}>
       
       {/* Sidebar */}
-      <div className="card glass-panel" style={{ width: '260px', position: 'sticky', top: '90px' }}>
+      <div className="card glass-panel responsive-sidebar" style={{ width: '260px', position: 'sticky', top: '90px' }}>
         <h3 style={{ marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
           <Activity size={24} color="var(--accent-primary)" />
           Dashboard
