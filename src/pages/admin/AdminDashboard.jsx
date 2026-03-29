@@ -190,7 +190,7 @@ export default function AdminDashboard() {
         {activeTab === 'tasks' && (
           <>
             <div className="card glass-panel animate-fade-in">
-              <h2 style={{ marginBottom: '1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+              <h2 style={{ marginBottom: '1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
                 <span>{editingTask ? 'Edit Task' : 'Create Daily Task'}</span>
                 <div style={{ display: 'flex', gap: '0.5rem' }}>
                   <input 
@@ -269,7 +269,7 @@ export default function AdminDashboard() {
                 {tasks.map(task => {
                   const assignee = regularUsers.find(u => u.id === task.assignedTo);
                   return (
-                    <div key={task.id} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1rem', border: '1px solid var(--border-color)', borderRadius: '12px' }}>
+                    <div key={task.id} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem', padding: '1rem', border: '1px solid var(--border-color)', borderRadius: '12px' }}>
                       <div>
                         <h4 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
                           {task.title} 
@@ -291,7 +291,7 @@ export default function AdminDashboard() {
 
         {activeTab === 'reports' && (
           <div className="card glass-panel animate-fade-in">
-            <h2 style={{ marginBottom: '1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+            <h2 style={{ marginBottom: '1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
               User Submissions & Reports
               <select 
                 value={selectedReportUser} 
@@ -312,7 +312,7 @@ export default function AdminDashboard() {
                   const assignee = regularUsers.find(u => u.id === task.assignedTo);
                   return (
                     <div key={task.id} style={{ padding: '1.5rem', border: '1px solid var(--border-color)', borderRadius: '12px', background: 'var(--bg-main)' }}>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem', marginBottom: '1rem' }}>
                         <div>
                           <h4 style={{ fontSize: '1.25rem', marginBottom: '0.25rem' }}>{task.title}</h4>
                           <p style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.875rem' }}>
@@ -424,9 +424,9 @@ export default function AdminDashboard() {
                       </div>
                     </div>
                   ) : (
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem', backgroundColor: 'var(--bg-secondary)', borderRadius: '8px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem', padding: '1rem', backgroundColor: 'var(--bg-secondary)', borderRadius: '8px' }}>
                       <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Target size={16} color="var(--accent-success)" /> <strong>Active Goal: </strong> {user.goal || 'None'}</div>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}><Target size={16} color="var(--accent-success)" /> <strong>Active Goal: </strong> {user.goal || 'None'}</div>
                         <div style={{ fontSize: '0.875rem', color: 'var(--text-muted)' }}>Roadmap configured: {user.roadmap ? 'Yes' : 'No'}</div>
                       </div>
                       <button 
